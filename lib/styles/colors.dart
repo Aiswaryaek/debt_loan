@@ -1,0 +1,12 @@
+import 'package:flutter/cupertino.dart';
+const tileColorGreen = Color.fromRGBO(130,212,179,1);
+const tileColorOrange = Color.fromRGBO(251,146,117,1);
+const tileHalfBlue = Color.fromRGBO(20,117,135,1);
+const tileHalfGrey = Color.fromRGBO(33,38,43,1);
+const gradientStartingColor = Color.fromRGBO(226,239,243,1);
+const backgroundColor = Color.fromRGBO(244, 246, 247,0.6);
+const tileColor = Color.fromRGBO(255,255,255,1);
+const sheetColor = Color.fromRGBO(244, 246, 247    ,1);
+const gradientEndColor = Color.fromRGBO(153,192,198,1);
+const roundTileColor = Color.fromRGBO(33,38,43,1);
+const yellowColor = Color.fromRGBO(221,242,71,1);
