@@ -5,12 +5,13 @@ import 'dart:convert';
 import '../models/debt_model.dart';
 import '../utilities/api_helpers.dart';
 
-Resource<DebtModel> getDeptApi(int id) {
+Resource<List<Datum>> getDeptApi() {
   return Resource(
-      url: 'test_api/flutterTest.php?pageNo=$id',
+      url: 'test_api/flutterTest.php?pageNo=1',
       parse: (response) {
-        Map<String, dynamic> getDebtMap = json.decode(response.body);
-        DebtModel debtResult = DebtModel.fromJson(getDebtMap);
-        return debtResult;
+        Map listMap = json.decode(response.body);
+        Iterable list = listMap["data"];
+        List<Datum> data = list.map((model) => Datum.fromJson(model)).toList();
+        return data;
       });
 }

@@ -1,9 +1,7 @@
 // ignore_for_file: unrelated_type_equality_checks
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
-import '../features/home_page.dart';
+import '../features/home/home_screen.dart';
 import '../styles/colors.dart';
 import '../styles/text_style.dart';
 

@@ -1,20 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'app.dart';
-import 'providers/debt_providers.dart';
+import 'features/home/home_bloc.dart';
 import 'repositories/debt_repositories.dart';
 
 void main() {
-  runApp(
-    MultiProvider(
-      providers: [
-        ChangeNotifierProvider(
-            create: (_) => GetDebtProvider(debtRepository: DebtRepository())),
-      ],
-      child: const MyApp(),
-    ),
-  );
+  runApp(MultiBlocProvider(providers: [
+    BlocProvider(
+        create: (context) => HomeBloc(debtRepository: DebtRepository())),
+  ], child: const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
